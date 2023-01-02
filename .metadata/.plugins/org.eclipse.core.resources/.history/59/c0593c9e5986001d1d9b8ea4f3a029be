@@ -1,0 +1,80 @@
+package com.kh.view;
+
+import java.util.Scanner;
+
+import com.kh.controller.MemberController;
+
+//view : 사용자가 보게될 시각적인 요소를 담당(화면 -> 입, 출력)
+
+
+public class MemberView {
+	//전역 Scanner 객체 추가
+	private Scanner sc = new Scanner(System.in);
+	
+	//MemberController 객체 추가
+	private MemberController mc = new MemberController();
+	
+	
+	/** -> alt + shift + j
+	 * 사용자가 보게될 첫 화면(메인화면)
+	 */
+	public void mainMenu() {
+		
+		while(true) {
+			
+			System.out.println("***** 회원 관리 프로그램 *****");
+			System.out.println("1. 회원 추가");
+			System.out.println("2. 회원 전체 조회");
+			System.out.println("3. 회원 아이디로 검색");
+			System.out.println("4. 회원 이름 키워드 검색");
+			System.out.println("5. 회원 정보 변경");
+			System.out.println("6. 회원 탈퇴");
+			System.out.println("0. 프로그램 종료");
+			System.out.println("-------------------------");
+			System.out.println("이용할 메뉴 선택 : ");
+			
+			int menu = Integer.parseInt(sc.nextLine());
+			
+			switch(menu) {
+			case 1: insertMember(); break;
+			case 2:	selectAll(); break;
+			case 3: selectByUserId(); break;
+			case 4: selectByUserName(); break;
+			case 5: updateMember(); break;
+			case 6: deleteMember(); break;
+			case 0: System.out.println("프로그램을 종료합니다."); return;
+			default : System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			}
+		
+		}
+	
+	}
+	
+	/**
+	 * 회원 추가용 화면
+	 * 추가하고자 하는 회원의 정보를 입력받아서 추가 요청할 수 있는 화면.
+	 */
+	public void insertMember() {
+		
+	}
+	
+	public void selectAll() {
+		
+	}
+	
+	public void selectByUserId() {
+		
+	}
+	
+	public void selectByUserName() {
+		
+	}
+	
+	public void updateMember() {
+		
+	}
+	
+	public void deleteMember() {
+		
+	}
+}
